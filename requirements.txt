@@ -7,3 +7,4 @@ nltk
 pickle
 flask
 joblib
+streamlit
