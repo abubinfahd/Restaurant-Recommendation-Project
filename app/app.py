@@ -14,11 +14,20 @@ with open(df_sample_path, 'rb') as d:
 
 # Ensure the function is defined before unpickling
 def get_content_based_recommendations(restaurant_name, top_n=5):
-    # Check if restaurant_name exists in the dataset
-    if restaurant_name not in df_sample['name'].values:
+    # Normalize the input to handle case insensitivity
+    restaurant_name = restaurant_name.strip().lower()
+    
+    # Find matching restaurants (case insensitive search)
+    matching_restaurants = df_sample[df_sample['name'].str.lower() == restaurant_name]
+    
+    # Check if the restaurant exists in the dataset
+    if matching_restaurants.empty:
         return {"error": f"{restaurant_name} not found in the dataset."}
     
-    idx = df_sample[df_sample['name'] == restaurant_name].index[0]
+    # If multiple restaurants match, you can handle it or just take the first match
+    idx = matching_restaurants.index[0]
+    
+    # Get similarity scores for the matched restaurant
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1:]  # Exclude the input restaurant from recommendations
@@ -39,9 +48,9 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        restaurant_name = request.form.get('restaurant_name')
-        top_n = int(request.form.get('top_n', 5))
-        
+        restaurant_name = request.form.get('restaurant_name')  # Get the input restaurant name
+        top_n = int(request.form.get('top_n', 5))  # Default to 5 recommendations
+
         # Get recommendations from the function defined above
         recommendations = get_content_based_recommendations(restaurant_name, top_n)
         
