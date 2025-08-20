@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Restaurants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .restaurant {
+            list-style-type: none;
+            padding: 0;
+        }
+        .restaurant li {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            color: #333;
+        }
+        .restaurant li:nth-child(even) {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 5 Recommendations for "{{ restaurant_name }}"</h1>
+        <ul class="restaurant">
+            {% for restaurant in recommendations %}
+                <li>{{ restaurant }}</li>
+            {% endfor %}
+        </ul>
+        <br>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

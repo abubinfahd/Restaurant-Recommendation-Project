@@ -1,0 +1,3 @@
+Evaluation Metrics at K=3:
+Precision at 3: 0.67
+Recall at 3: 0.67
