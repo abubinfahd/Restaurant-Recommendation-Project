@@ -2,3 +2,13 @@ data/zomato.csv
 data/clean_zomato.csv
 data/clean_data.csv
 models/
+
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+*.db
+*.log

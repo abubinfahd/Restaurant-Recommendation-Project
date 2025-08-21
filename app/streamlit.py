@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 
 # Manually set the path to the models folder and .pkl files
-cosine_sim_path = r'D:\Restaurant Recommendation Project\models\cosine_sim.pkl'
-df_sample_path = r'D:\Restaurant Recommendation Project\models\df_sample.pkl'
+cosine_sim_path = 'models/cosine_sim.pkl'
+df_sample_path = 'models/df_sample.pkl'
 
 # Load your pre-trained models using pickle
 with open(cosine_sim_path, 'rb') as c:
