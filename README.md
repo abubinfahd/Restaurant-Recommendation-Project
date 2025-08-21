@@ -85,7 +85,7 @@ streamlit run app/streamlit.py
 ```
 3. Open your web browser and go to `http://localhost:8501`
 
-![Alt text](images\streamlit.png)
+![Alt text](images/streamlit.png)
 
 ## Method 2: Run the API
 
@@ -98,8 +98,9 @@ python app/app.py
 ```
 2. The API will be available at `http://127.0.0.1:5000`
 
-![Alt text](images\1.png)
-![Alt text](images\2.png)
+![Alt text](images/1.png)
+![Alt text](images/2.png)
+
 ## Method 3: Run with Docker
 
 For a more isolated and reproducible environment, use Docker and Docker Compose.
