@@ -109,6 +109,8 @@ For a more isolated and reproducible environment, use Docker and Docker Compose.
 ```bash
 docker-compose build
 ```
+![Alt text](images/docker.png)
+
 2. Build the Docker image by running the following command:
 ```bash
 docker-compose up
