@@ -57,6 +57,18 @@ Clone this repository to your local machine using Git:
 git clone https://github.com/abubinfahd/Restaurant-Recommendation-Project.git
 cd restaurant-recommendation-system
 ```
+2. Create a virtual environment:
+Now, create a virtual environment. This step ensures that your project dependencies are isolated from other projects.
+```bash
+python -m venv venv
+```
+Activate the virtual environment:
+After creating the virtual environment, activate it.
+```bash
+.\venv\Scripts\activate
+
+```
+On Windows:
 ## 2. Install Dependencies
 Install all the required Python libraries listed in `requirements.txt.`
 
@@ -67,7 +79,7 @@ pip install -r requirements.txt
 
 You can run the application in three different ways: as a Streamlit app, as an API, or using Docker.
 
-## Method 1: Run the Streamlit App (Recommended)
+## Method 1: Run the Streamlit App 
 This is the easiest way to interact with the recommendation system.
 
 1. Navigate to the project's root directory.
@@ -94,7 +106,7 @@ python app/app.py
 ![Alt text](images/1.png)
 ![Alt text](images/2.png)
 
-## Method 3: Run with Docker
+## Method 3: Run with Docker(Recommended)
 
 For a more isolated and reproducible environment, use Docker and Docker Compose.
 
