@@ -57,14 +57,7 @@ Clone this repository to your local machine using Git:
 git clone https://github.com/abubinfahd/Restaurant-Recommendation-Project.git
 cd restaurant-recommendation-system
 ```
-## 2. Create and Activate a Python Virtual Environment
-It's highly recommended to use a virtual environment to manage project dependencies.
-
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-```
-## 3. Install Dependencies
+## 2. Install Dependencies
 Install all the required Python libraries listed in `requirements.txt.`
 
 ```bash
